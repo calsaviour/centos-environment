@@ -7,5 +7,5 @@ if [ "$?" = "0" ]; then
 	exit 0
 else
 	echo "Start installation of Development Tools"
-	sudo yum group install "Development Tools"
+	sudo yum group install -y "Development Tools"
 fi

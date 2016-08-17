@@ -7,7 +7,7 @@ if [ "$?" = "0" ]; then
 	exit 0
 else
 	echo "Start installation of GNOME Desktop"
-	sudo yum groups install "GNOME Desktop"
+	sudo yum groups install -y "GNOME Desktop"
 	sudo systemctl set-default graphical.target
 	sudo systemctl start graphical.target
 fi

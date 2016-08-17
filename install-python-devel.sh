@@ -7,5 +7,5 @@ if [ "$?" = "0" ]; then
 	exit 0
 else
 	echo "Start installation of python devel tools"
-	sudo yum install python-devel
+	sudo yum install -y python-devel
 fi
