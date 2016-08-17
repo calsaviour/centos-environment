@@ -16,6 +16,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "install-git.sh"
   config.vm.provision "shell", path: "install-gnome.sh"
   config.vm.provision "shell", path: "install-development-tools.sh"
+  config.vm.provision "shell", path: "install-python-devel.sh"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
