@@ -15,6 +15,7 @@ Vagrant.configure(2) do |config|
   config.vm.box = "centos/7"
   config.vm.provision "shell", path: "install-git.sh"
   config.vm.provision "shell", path: "install-gnome.sh"
+  config.vm.provision "shell", path: "install-development-tools.sh"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
