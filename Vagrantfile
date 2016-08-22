@@ -20,6 +20,13 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", path: "install-atom.sh"
   config.vm.provision "shell", path: "install-openjdk.sh"
 
+  # set auto_update to false, if you do NOT want to check the correct 
+  # additions version when booting this machine
+  config.vbguest.auto_update = false
+
+  # do NOT download the iso file from a webserver
+  config.vbguest.no_remote = true
+  
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -53,8 +60,8 @@ Vagrant.configure(2) do |config|
   #   # Display the VirtualBox GUI when booting the machine
      vb.gui = true
   #
-  #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
+    # Customize the amount of memory on the VM:
+     vb.memory = "3024"
     end
   #
   # View the documentation for the provider you are using for more
